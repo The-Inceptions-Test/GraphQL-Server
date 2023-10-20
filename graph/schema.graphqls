@@ -1,0 +1,31 @@
+# GraphQL schema example
+#
+
+
+type Session {
+  token: ID!
+}
+
+input CreateSessionInput {
+  config: String!
+}
+
+type Event {
+  id: ID!
+}
+
+input CreateEventInput {
+  type: String!
+}
+
+
+type Mutation {
+  createSession(input: CreateSessionInput!): Session
+  createEvent(input: CreateEventInput!): Event
+}
+
+
+
+
+
+
